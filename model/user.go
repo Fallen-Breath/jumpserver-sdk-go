@@ -15,6 +15,10 @@ type User struct {
 	OTPLevel      int    `json:"otp_level"`
 	Language      string `json:"lang"`
 	HasPublicKeys bool   `json:"has_public_keys"`
+
+	// fallen's koko fork: check ssh host key -- add model field
+	// https://github.com/jumpserver/jumpserver/blob/v4.10.4-lts/apps/users/serializers/user.py#L132-L134
+	IsSuperuser bool `json:"is_superuser"`
 }
 
 type MiniUser struct {
